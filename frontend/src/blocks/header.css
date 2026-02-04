@@ -1,0 +1,55 @@
+.header {
+  min-height: 120px;
+  font-family: "Inter", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Use RGBA to specify opacity */
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+}
+
+/* The best solution is shown here - suggest it in "Could be improved" */
+
+.header__logo {
+  width: 173px;
+  height: 33px;
+  object-fit: contain;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.header__user-email {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.header__logout-button {
+  background-color: transparent;
+  border: 0;
+  color: #A9A9A9;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 544px) {
+  .header {
+    min-height: 85px;
+  }
+
+  .header__logo {
+    width: 126px;
+    height: 24px;
+    margin: 0 0 0 7px;
+  }
+}
