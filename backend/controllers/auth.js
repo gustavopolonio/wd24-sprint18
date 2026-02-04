@@ -58,7 +58,7 @@ export async function authenticate(req, res, next) {
       {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict',
+        sameSite: 'none',
         maxAge: 7 * 24 * 60 * 60
       }
     )
@@ -109,7 +109,7 @@ export async function refreshToken(req, res, next) {
       {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict',
+        sameSite: 'none',
         maxAge: 7 * 24 * 60 * 60
       }
     )
@@ -133,7 +133,7 @@ export async function logout(req, res, next) {
       {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict',
+        sameSite: 'none',
       }
     )
 

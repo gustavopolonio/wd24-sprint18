@@ -20,14 +20,14 @@ main()
   .catch((err) => console.log(`Error connecting to mongo: ${err}`))
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/mydb');
+  await mongoose.connect(process.env.DB_URL);
 }
 
 // middleware
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: process.env.CLIENT_URL,
   credentials: true
 }))
 
